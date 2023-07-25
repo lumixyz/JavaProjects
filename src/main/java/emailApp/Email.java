@@ -87,4 +87,13 @@ public class Email { //This will house the objects.
 	}
 	
 	
+	//Show the mailbox capacity
+	public int getMailboxCapacity() {return mailboxCapacity;}
+	
+	//Get alternate email
+	public String getAlternateEmail() {return alternateEmail;}
+	
+	//Get password
+	public String getPassword() {return password;}
+	
 }
