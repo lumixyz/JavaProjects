@@ -9,9 +9,11 @@ public class Email { //This will house the objects.
 	private String lastName;
 	private String password;
 	private String department;
-	private int mailboxCapacity;
+	private String email;
+	private int mailboxCapacity = 500;
 	private int defaultPasswordLength = 10;
 	private String alternateEmail;
+	private String companySuffix = "lumispencer.com";
 	
 	
 	//constructor to receive the first name and last name
@@ -27,6 +29,10 @@ public class Email { //This will house the objects.
 		//Call a method that returns a random password
 		this.password = randomPassword(defaultPasswordLength);
 		System.out.println("Your password is: " + this.password);
+		
+		//Combine elements to generate email address
+		email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+		System.out.println("Your email is: " + email);
 	}
 	
 	//ask for the department
@@ -66,11 +72,19 @@ public class Email { //This will house the objects.
 	}
 	
 	//set the mailbox capacity
-	
+	public void setMailboxCapacity(int capacity) { // mailbox capacity can be changed by calling this method on the object e.g. 	em1.setMailboxCapacity()
+		this.mailboxCapacity = capacity;
+	}
 	
 	//set the alternate email
-	
+	public void setAlternateEmail(String altEmail) {
+		this.alternateEmail = altEmail;
+	}
 	
 	//change the password
-
+	public void changePassword(String password) {
+		this.password = password;
+	}
+	
+	
 }
