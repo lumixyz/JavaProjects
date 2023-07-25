@@ -37,7 +37,7 @@ public class Email { //This will house the objects.
 	
 	//ask for the department
 	private String setDepartment() {
-		System.out.println("DEPARTMENT CODES\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
+		System.out.println("NEW WORKER: "+ firstName + ". DEPARTMENT CODES\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
 		Scanner in = new Scanner(System.in);
 		int deptChoice= in.nextInt();
 		String dept = "";
@@ -96,6 +96,11 @@ public class Email { //This will house the objects.
 	//Get password
 	public String getPassword() {return password;}
 	
-	//hello is anyone home
+	//Return all the info of the object
+	public String showInfo() {
+		return "Display Name: " + firstName + " " +  lastName + 
+				"\nCompany Email: " + email + 
+				"\nMailbox Capacity: " + mailboxCapacity + "mb";		
+	}
 	
-}
+}	
