@@ -6,6 +6,8 @@ public class StudentDBApp {
 		// Ask how many new students to be added
 		
 		//Create n number of students
+		
+		Student stu1 = new Student();
 
 	}
 
